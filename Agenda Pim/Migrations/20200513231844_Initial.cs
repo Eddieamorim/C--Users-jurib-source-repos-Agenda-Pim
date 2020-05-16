@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
-using NHibernate.Mapping;
+ 
 
 namespace Agenda_Pim.Migrations
 {
@@ -49,7 +49,6 @@ namespace Agenda_Pim.Migrations
                     HorarioFinal = table.Column<DateTime>(nullable: false),
                     IdAuditorio1 = table.Column<int>(nullable: true),
                     DescricaoEvento = table.Column<string>(nullable: true),
-                    SttsTrigger = table.Column<bool>(nullable: false),
                     Proprietario = table.Column<int>(nullable: false),
                     IdUsuario1 = table.Column<int>(nullable: true),
                     ObservacaoAgendamento = table.Column<string>(nullable: true)
@@ -81,7 +80,7 @@ namespace Agenda_Pim.Migrations
                 table: "Agendamentos",
                 column: "IdUsuario1");
         }
-       
+        
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
